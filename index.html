@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try CodeWithHarry</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- <div class="background">
+      <img src="Resource/Images/Windows 11 Wallpaper 1.jpg" alt="" />
+    </div> -->
+    <video id="vid" autoplay muted>
+      <source src="Resource/video/video.webm" type="video/webm">
+    </video>
+    <!-- <div class="icons">
+        <img src="Resource/Icons/recyclebinicon.png" alt="">
+        <div>Recycle Bin</div>
+    </div> -->
+    <div class="taskbar">
+      <div class="center">
+        <a>
+          <img id="start" class="ico" src="Resource/Icons/start.png" alt=""
+        /></a>
+        <a> <img class="ico" src="Resource/Icons/search.png" alt="" /></a>
+        <a> <img class="ico" src="Resource/Icons/task.png" alt="" /></a>
+        <a> <img class="ico" src="Resource/Icons/widgets.png" alt="" /></a>
+        <a id="open"> <img class="ico" src="Resource/Icons/explorer.png" alt="" /></a>
+        <a> <img class="ico" src="Resource/Icons/Mail.png" alt="" /></a>
+        <a>
+          <img class="ico" src="Resource/Icons/Visual_Studio_Code.png" alt=""
+        /></a>
+        <a> <img class="ico" src="Resource/Icons/edgeicon.png" alt="" /></a>
+      </div>
+
+      <!-- <img class="right" src="Resource/Original/taskbarright.PNG" alt="" /> -->
+      <div class="right">
+        <img src="./Resource/SVG/expand.svg" class="expand right-icon"  alt="..." >
+
+        <div class="percent"></div>
+
+        <img src="./Resource/SVG/expand.svg" class="sound right-icon"  alt="..." >
+
+        <img src="./Resource/SVG/expand.svg" class="network right-icon"  alt="..." >
+
+        <div class="time">
+          <span id="timenow"></span>
+          <span id="day"></span>
+          <span id="date">28-06-2021</span>
+        </div>
+
+        <img src="Resource/Icons/Mail.png" alt="..." class="notify" >
+      </div>
+    </div>
+
+    <div class="startmenu">
+      <div class="startContent">
+        <div class="top-bar">
+          <h4>Pinned</h4>
+          <button class="btn-origanl">All Apps ></button>
+        </div>
+
+        <div class="icons">
+          <div class="cover"><img class="icon ico" src="Resource/Icons/Mail.png" alt="" /></img>
+          <span class="icon-name">Mail</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/Microsoft Teams.png" alt="" /></img>
+          <span class="icon-name">Microsoft Teams</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/OneDrive.png" alt="" /></img>
+          <span class="icon-name">OneDrive</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/Paint-Icon.png" alt="" /></img>
+          <span class="icon-name">Paint</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/SharePoint.png" alt="" /></img>
+          <span class="icon-name">SharePoint</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/snip.png" alt="" /></img>
+          <span class="icon-name">Snip</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/Visual_Studio_Code.png" alt="" /></img>
+          <span class="icon-name">VS Code</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/Word.png" alt="" /></img>
+          <span class="icon-name">Word</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/Calendar.png" alt="" /></img>
+          <span class="icon-name">Calendar</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/cards.png" alt="" /></img>
+          <span class="icon-name">Solitaire</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/weather.png" alt="" /></img>
+          <span class="icon-name">Weather</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/Excel.png" alt="" /></img>
+          <span class="icon-name">Excel</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/PowerPoint.png" alt="" /></img>
+          <span class="icon-name">Poweroint</span>
+          </div>
+          <div class="cover"><img class="icon ico" src="Resource/Icons/Yammer.png" alt="" /></img>
+          <span class="icon-name">Yammer</span>
+          </div>
+        </div>
+        <div class="recomended top-bar">
+          <h4>Recommended</h4>
+          <button class="btn-origanl">More ></button>
+        </div>
+        <div class="recommended-apps">
+          <div class="cell">
+            <div class="img">
+            <img src="Resource/Icons/cards.png" alt="" class="cell-item icon ico">
+          </div>
+          <div class="app-info">
+            <h5 class="app-text">Solitaire</h5>
+            <p class="app-desc">Recently Updated</p>
+          </div>
+        </div>
+        <div class="cell">
+            <div class="img">
+              <img src="Resource/Icons/Word.png" alt="" class="cell-item icon ico">
+            </div>
+            <div class="app-info">
+              <h5 class="app-text">Word</h5>
+              <p class="app-desc">Recently Added</p>
+            </div>
+        </div>
+        
+      </div>
+
+        <div class="account">
+          <div class="user-box">
+            <div class="wrap">
+              <img src="Resource/Icons/admin.png" alt="" />
+            </div>
+            <h5 class="user-name">Harry</h5>
+          </div>
+          <div class="power-options"><img src="Resource/SVG/power.svg" alt=""></div>
+        </div>
+      </div>
+
+    </div>
+
+
+  <article class="article">
+    <div id="header">
+      <div class="top-line">
+        <div class="top-left">
+          <img src="Resource/Icons/explorer.png" alt="" class="ico title-icon">
+          <h5>File Explorer</h5>
+        </div>
+        <div class="top-right">
+          <button class="btn-origanl" id="minbtn">
+            <img src="Resource/SVG/minimize_black_48dp.svg" alt="">
+          </button>
+          <button class="btn-origanl">
+            <img src="Resource/SVG/crop_din_black_48dp.svg" alt="">
+          </button>
+          <button class="btn-origanl" id="closebtn">
+            <img src="Resource/SVG/close_black_48dp.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="baseline">
+      <div class="tab">
+        <img class="tab-img" src="Resource/SVG/add_circle_outline_black_48dp.svg" alt="">
+        New Folder
+        <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
+      </div>
+      <img class="tab-img" src="Resource/SVG/content_cut_black_24dp.svg" alt="">
+      <img class="tab-img" src="Resource/SVG/content_copy_black_48dp.svg" alt="">
+      <img class="tab-img" src="Resource/SVG/content_paste_black_48dp.svg" alt="">
+      <img class="tab-img" src="Resource/SVG/auto_stories.svg" alt="">
+      <img class="tab-img" src="Resource/SVG/shortcut_black_48dp.svg" alt="">
+      <img class="tab-img" src="Resource/SVG/delete_black_48dp.svg" alt="">
+      <div class="tab">
+          <img class="tab-img" src="Resource/SVG/mobiledata_off_black_48dp.svg" alt="">
+          Sort
+          <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
+      </div>
+      
+      <div class="tab">
+          <img class="tab-img" src="Resource/SVG/sort_black_48dp.svg" alt="">
+          View
+          <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
+      </div>
+      
+      <div class="tab">
+          <img class="tab-img" src="Resource/SVG/more_horiz_black_48dp.svg" alt="">
+      </div>
+
+
+    </div>
+    <div id="main">
+      <aside class="aside">
+        <div class="indent">
+          <div class="bar">
+            <img class="bar-ico" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
+            <img class="bar-ico" src="Resource/Icons/weather.png" alt="">
+            <p>Quick access</p>
+          </div>
+          <div class="indent-items">
+            <img class="bar-ico" src="Resource/Icons/download.png" alt="">
+            <p>Desktop</p>
+          </div>
+          <div class="indent-items">
+            <img class="bar-ico" src="Resource/Icons/download.png" alt="">
+            <p>Downloads</p>
+          </div>
+          <div class="indent-items">
+            <img class="bar-ico" src="Resource/Icons/download.png" alt="">
+            <p>Documents</p>
+          </div>
+          <div class="indent-items">
+            <img class="bar-ico" src="Resource/Icons/image.png" alt="">
+            <p>Pictures</p>
+          </div>
+          <div class="indent-items">
+            <img class="bar-ico" src="Resource/Icons/music.png" alt="">
+            <p>Music</p>
+          </div>
+          <div class="indent-items">
+            <img class="bar-ico" src="Resource/Icons/game.png" alt="">
+            <p>Saved Games</p>
+          </div>
+          <div class="indent-items">
+            <img class="bar-ico" src="Resource/Icons/download.png" alt="">
+            <p>Videos</p>
+          </div>
+        </div>
+        <div class="indent">
+          <div class="bar">
+            <img class="bar-ico" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
+            <img class="bar-ico" src="Resource/Icons/thispc.png" alt="">
+            <p>This PC</p>
+          </div>
+          <div class="indent-items">
+            <img class="bar-ico" src="Resource/Icons/download.png" alt="">
+            <p>Local Disk (C:)</p>
+          </div>
+          <div class="indent-items">
+            <img class="bar-ico" src="Resource/Icons/download.png" alt="">
+            <p>Local Disk (D:)</p>
+          </div>
+          <div class="indent-items">
+            <img class="bar-ico" src="Resource/Icons/download.png" alt="">
+            <p>Local Disk (E:)</p>
+          </div>
+          <div class="indent-items">
+            <img class="bar-ico" src="Resource/Icons/download.png" alt="">
+            <p>Local Disk (F:)</p>
+          </div>
+        </div>
+        <div class="indent">
+          <div class="bar">
+            <img class="bar-ico" src="Resource/SVG/chevron_right_black_48dp.svg" alt="">
+            <img class="bar-ico" src="Resource/Icons/OneDrive.png" alt="">
+            <p>OneDrive</p>
+          </div>
+        </div>
+        <div class="indent">
+          <div class="bar">
+            <img class="bar-ico" src="Resource/SVG/chevron_right_black_48dp.svg" alt="">
+            <img class="bar-ico" src="Resource/Icons/OneNote.png" alt="">
+            <p>Network</p>
+          </div>
+        </div>
+      </aside>
+      <div class="contented">
+        <h1 class="heading">Folders (7)</h1>
+        <div class="folders">
+
+          <div class="folder">
+            <img class="folder-ico" src="Resource/Icons/explorer.png" alt="">
+            <h3 class="folder-title">Desktop</h3>
+          </div>
+          <div class="folder">
+            <img class="folder-ico" src="Resource/Icons/explorer.png" alt="">
+            <h3 class="folder-title">Documents</h3>
+          </div>
+          <div class="folder">
+            <img class="folder-ico" src="Resource/Icons/download.png" alt="">
+            <h3 class="folder-title">Downloads</h3>
+          </div>
+          <div class="folder">
+            <img class="folder-ico" src="Resource/Icons/music.png" alt="">
+            <h3 class="folder-title">Music</h3>
+          </div>
+          <div class="folder">
+            <img class="folder-ico" src="Resource/Icons/image.png" alt="">
+            <h3 class="folder-title">Pictures</h3>
+          </div>
+          <div class="folder">
+            <img class="folder-ico" src="Resource/Icons/game.png" alt="">
+            <h3 class="folder-title">Saved Games</h3>
+          </div>
+          <div class="folder">
+            <img class="folder-ico" src="Resource/Icons/explorer.png" alt="">
+            <h3 class="folder-title">Videos</h3>
+          </div>
+
+        </div>
+        <div class="Drives">
+          <h1 class="heading">Device & Drives (4)</h1>
+          <div class="localdiscs">
+            <div class="local">
+              <img class="folder-ico" src="Resource/Icons/explorer.png" alt="">
+              <div class="wrap">
+                <h3 class="folder-title">Local Diak(C:)</h3>
+                <!-- <div class="storage">
+                  <div class="space"></div>
+                </div> -->
+              </div>
+            </div>
+            <div class="local">
+              <img class="folder-ico" src="Resource/Icons/explorer.png" alt="">
+              <h3 class="folder-title">Local Diak(D:)</h3>
+              <!-- <div class="storage">
+                <div class="space"></div>
+              </div> -->
+            </div>
+            <div class="local">
+              <img class="folder-ico" src="Resource/Icons/explorer.png" alt="">
+              <h3 class="folder-title">Local Diak(E:)</h3>
+              <!-- <div class="storage">
+                <div class="space"></div>
+              </div> -->
+            </div>
+            <div class="local">
+              <img class="folder-ico" src="Resource/Icons/explorer.png" alt="">
+              <h3 class="folder-title">Local Diak(F:)</h3>
+              <!-- <div class="storage">
+                <div class="space"></div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+    
+  </body>
+  <script src="JS/app.js"></script>
+</html>
+
+<!-- <video autoplay muted id="vid">
+  <source src="Resource/video/video.webm" type="video/webm" />
+</video> -->
