@@ -8,106 +8,150 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- <div class="background">
-      <img src="Resource/Images/Windows 11 Wallpaper 1.jpg" alt="" />
-    </div> -->
-    <video id="vid" autoplay muted>
+    <div class="background">
+      <img id="background-image" src="Resource/6233787.jpg" alt="" />
+    </div>
+    <!-- <video id="vid" autoplay muted>
       <source src="Resource/video/video.webm" type="video/webm">
-    </video>
+    </video> -->
     <!-- <div class="icons">
         <img src="Resource/Icons/recyclebinicon.png" alt="">
         <div>Recycle Bin</div>
     </div> -->
-    <div class="taskbar">
+    <div class="taskbar theme">
       <div class="center">
         <a>
-          <img id="start" class="ico" src="Resource/Icons/start.png" alt=""
-        /></a>
-        <a> <img class="ico" src="Resource/Icons/search.png" alt="" /></a>
-        <a> <img class="ico" src="Resource/Icons/task.png" alt="" /></a>
-        <a> <img class="ico" src="Resource/Icons/widgets.png" alt="" /></a>
-        <a id="open"> <img class="ico" src="Resource/Icons/explorer.png" alt="" /></a>
-        <a> <img class="ico" src="Resource/Icons/Mail.png" alt="" /></a>
+          
+          <img id="start" class="ico taskbar-icon-wrap" src="Resource/Icons/start.png" alt=""/>
+          <!-- <img id="start" src="https://img.icons8.com/nolan/64/windows-logo.png"/> -->
+      </a>
+        <a id="open">
+           <img class="ico taskbar-icon-wrap" src="Resource/icons-1/file-manager.svg" alt="" /></a>
+        <a> 
+          <img class="ico taskbar-icon-wrap" src="Resource/icons-1/accessories-text-editor.svg"/></a>
         <a>
-          <img class="ico" src="Resource/Icons/Visual_Studio_Code.png" alt=""
-        /></a>
-        <a> <img class="ico" src="Resource/Icons/edgeicon.png" alt="" /></a>
+           <img class="ico taskbar-icon-wrap" src="Resource/icons-1/terminal.svg" alt="" /></a>
+        <a>
+           <img class="ico taskbar-icon-wrap" src="Resource/icons-1/figma.svg" alt="" /></a>
+        <a>
+           <img class="ico taskbar-icon-wrap" src="Resource/icons-1/awf.svg" alt="" /></a>
+        <a>
+          
+          <img class="ico taskbar-icon-wrap" src="Resource/Icons/Visual_Studio_Code.png" alt=""/>
+        </a>
+        <a> 
+          <img class="ico taskbar-icon-wrap" src="Resource/Icons/edgeicon.png" alt="" />
+        </a>
       </div>
 
       <!-- <img class="right" src="Resource/Original/taskbarright.PNG" alt="" /> -->
       <div class="right">
-        <img src="./Resource/SVG/expand.svg" class="expand right-icon"  alt="..." >
+        <div class="right-side">
 
-        <div class="percent"></div>
-
-        <img src="./Resource/SVG/expand.svg" class="sound right-icon"  alt="..." >
-
-        <img src="./Resource/SVG/expand.svg" class="network right-icon"  alt="..." >
-
-        <div class="time">
-          <span id="timenow"></span>
-          <span id="day"></span>
-          <span id="date">28-06-2021</span>
+          <img src="./Resource/SVG/expand.svg" class="expand right-icon"  alt="..." >
+          
+          <div class="percent"></div>
+          
+          <img src="./Resource/SVG/expand.svg" class="sound right-icon"  alt="..." >
+          
+          <img src="./Resource/SVG/expand.svg" class="network right-icon"  alt="..." >
+          
+          <div class="time">
+            <span id="timenow"></span>
+            <span id="day"></span>
+            <span id="date">28-06-2021</span>
+          </div>
         </div>
-
-        <img src="Resource/Icons/Mail.png" alt="..." class="notify" >
-      </div>
+        <button class="show-desktop"></button></div>
     </div>
 
     <div class="startmenu">
-      <div class="startContent">
+      <div class="startContent theme">
+        
+        <div class="search">
+          <img src="#" alt="" class="search-ico">
+          <input type="text" class="search-box" placeholder="Type Here To Search">
+        </div>
         <div class="top-bar">
           <h4>Pinned</h4>
           <button class="btn-origanl">All Apps ></button>
         </div>
 
         <div class="icons">
-          <div class="cover"><img class="icon ico" src="Resource/Icons/Mail.png" alt="" /></img>
-          <span class="icon-name">Mail</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/Mail.png" alt="" /></img>
+              <span class="icon-name">Mail</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/Microsoft Teams.png" alt="" /></img>
-          <span class="icon-name">Microsoft Teams</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/Microsoft Teams.png" alt="" /></img>
+              <span class="icon-name">Microsoft Teams</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/OneDrive.png" alt="" /></img>
-          <span class="icon-name">OneDrive</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/OneDrive.png" alt="" /></img>
+              <span class="icon-name">OneDrive</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/Paint-Icon.png" alt="" /></img>
-          <span class="icon-name">Paint</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/Paint-Icon.png" alt="" /></img>
+              <span class="icon-name">Paint</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/SharePoint.png" alt="" /></img>
-          <span class="icon-name">SharePoint</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/SharePoint.png" alt="" /></img>
+              <span class="icon-name">SharePoint</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/snip.png" alt="" /></img>
-          <span class="icon-name">Snip</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/snip.png" alt="" /></img>
+              <span class="icon-name">Snip</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/Visual_Studio_Code.png" alt="" /></img>
-          <span class="icon-name">VS Code</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/Visual_Studio_Code.png" alt="" /></img>
+              <span class="icon-name">VS Code</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/Word.png" alt="" /></img>
-          <span class="icon-name">Word</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/Word.png" alt="" /></img>
+              <span class="icon-name">Word</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/Calendar.png" alt="" /></img>
-          <span class="icon-name">Calendar</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/Calendar.png" alt="" /></img>
+              <span class="icon-name">Calendar</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/cards.png" alt="" /></img>
-          <span class="icon-name">Solitaire</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/cards.png" alt="" /></img>
+              <span class="icon-name">Solitaire</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/weather.png" alt="" /></img>
-          <span class="icon-name">Weather</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/weather.png" alt="" /></img>
+              <span class="icon-name">Weather</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/Excel.png" alt="" /></img>
-          <span class="icon-name">Excel</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/Excel.png" alt="" /></img>
+              <span class="icon-name">Excel</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/PowerPoint.png" alt="" /></img>
-          <span class="icon-name">Poweroint</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/PowerPoint.png" alt="" /></img>
+              <span class="icon-name">Poweroint</span>
+            </div>
           </div>
-          <div class="cover"><img class="icon ico" src="Resource/Icons/Yammer.png" alt="" /></img>
-          <span class="icon-name">Yammer</span>
+          <div class="cover">
+            <div class ="wrap"> <img class="icon ico" src="Resource/Icons/Yammer.png" alt="" /></img>
+              <span class="icon-name">Yammer</span>
+            </div>
           </div>
         </div>
         <div class="recomended top-bar">
           <h4>Recommended</h4>
-          <button class="btn-origanl">More ></button>
+          <!-- <button class="btn-origanl">More ></button> -->
         </div>
         <div class="recommended-apps">
           <div class="cell">
@@ -132,11 +176,9 @@
       </div>
 
         <div class="account">
-          <div class="user-box">
-            <div class="wrap">
-              <img src="Resource/Icons/admin.png" alt="" />
-            </div>
-            <h5 class="user-name">Harry</h5>
+          <div class="user-box wrap">
+            <img src="Resource/Icons/admin.png" alt="" />
+            <p class="user-name icon-name">Harry</p>
           </div>
           <div class="power-options"><img src="Resource/SVG/power.svg" alt=""></div>
         </div>

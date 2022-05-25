@@ -2,10 +2,17 @@
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Roboto, Oxygen;
+  color: whitesmoke;
 }
 
 h4 {
   cursor: default;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+#background-image {
+  background-size: cover;
 }
 
 .btn-origanl {
@@ -41,28 +48,30 @@ body {
 }
 
 /* taskbar */
+.theme {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(32px) !important;
+}
 
 .taskbar {
   position: absolute;
-  background-color: #f3f3f3;
+  // background-color: rgba(0, 0, 0, 0.4);
+
   width: 100%;
   bottom: 0;
   left: 0;
   right: 0;
   display: flex;
   z-index: 10;
-  justify-content: center; /*start*/
+  justify-content: center;
 
-  /*start*/
-  /*start*/
-
-  /* background-color: rgba(243, 243, 243, 0.3);
-  backdrop-filter: blur(4px); */
+  // background-color: rgba(243, 243, 243, 0.3);
+  // backdrop-filter: blur(32px);
 }
 
 .ico {
-  width: 1.5rem;
-  padding: 0.3rem 0.6rem;
+  width: 26px;
+  padding: 10px 7px 2px 7px;
 
   -webkit-filter: brightness(1.1);
   filter: brightness(1.1);
@@ -79,12 +88,21 @@ body {
 }
 
 .right {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   position: absolute;
   right: 0;
-  /* margin: 6px 0; */
+  color: #3f3f3f;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  right: 0;
   height: 100%;
   width: 15rem;
   color: #3f3f3f;
@@ -97,9 +115,9 @@ body {
 .time {
   display: flex;
   flex-direction: column;
-  font-size: 0.6rem;
-  font-weight: 600;
-  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-align: right;
 }
 
 .notify {
@@ -121,11 +139,12 @@ body {
   position: absolute;
   left: 50%;
   bottom: 3rem;
-  transform: translate(-50%, 6%);
+  transform: translate(-50%, 2rem);
   width: 36rem;
   background: #f6f6f6;
-  height: 37rem;
+  height: auto;
   border-radius: 8px;
+  border: 1px solid#3f3f3f;
   z-index: 9;
   transition: all 0.3s ease-in;
 }
@@ -136,26 +155,76 @@ body {
   width: 100%;
   height: 100%;
 }
+.show-desktop {
+  width: 15px;
+  height: 100%;
+  border: 0.1px solid transparent;
+  // background: rgba(245, 245, 245, 0.233);
+  background: transparent;
+  position: relative;
+  &:hover {
+    border-right: 0.1px solid whitesmoke;
+    border-spacing: 13px;
+  }
+}
+
+.wrap {
+  padding: 6px 6px;
+}
+.taskbar-icon-wrap {
+  padding: 8px 10px;
+}
+.taskbar-icon-wrap:hover {
+  border-radius: 3px;
+  background: #ffffff21;
+  // border: solid .1px transparent;
+  // background-clip: padding-box;
+}
+// .taskbar-icon-wrap::after{
+      // position: relative;
+      // bottom: 7px;
+      // content: '';
+      // width: 4px;
+      // height: 1px;
+      // border-radius: 50%;
+      // background-color: #0096ff;
+// }
 
 .cover {
   cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.wrap:hover {
+  border-radius: 3px;
+  background: #f0f8ff2e;
+}
+#start {
+  transition: 300ms ease;
+}
+#start:active {
+  transform: scale(65%);
+  filter: brightness(0.5%);
 }
 
 .icons {
   margin: 0rem 2rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  padding: 6px;
   align-self: center;
   justify-self: center;
   place-content: center;
-  column-gap: 2rem;
+  // column-gap: 2rem;
 }
 
 .icon {
-  width: 2.6rem;
+  width: 35px;
 }
 .icon-name {
-  font-size: 0.8rem;
+  font-size: 13px;
   cursor: default;
 }
 
@@ -178,6 +247,7 @@ body {
   justify-content: start;
   column-gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+  min-height: 11rem;
   padding: 0 2rem;
 }
 .app-info {
@@ -189,27 +259,30 @@ body {
   padding: 0 4px;
 }
 .app-info p {
-  color: #3f3f3f;
+  // color: #3f3f3f;
   font-size: 0.7rem;
   cursor: default;
 }
-.app-text,
-.app-desc {
+.app-text .app-desc {
   cursor: default;
+}
+.app-text {
+  font-weight: 400;
 }
 .cell {
   display: flex;
 }
 
 .account {
-  background: #f3f3f3;
   height: 3.5rem;
   border-radius: 8px;
   display: flex;
   align-items: center;
   padding: 0 2.3rem;
   justify-content: space-between;
-  position: relative;
+  border-top: 1px solid#3f3f3f;
+  // backdrop-filter: blur(32px)!important;
+  // position: relative;
   bottom: -6rem;
 }
 .user-box {
@@ -219,13 +292,14 @@ body {
 }
 .user-box img {
   background-size: cover;
-  width: 3rem;
-  height: 3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   background: #e6e6e6;
+  border: 0.2px solid whitesmoke;
 }
 .user-name {
-  padding: 0 1rem;
+  padding: 0 0.4rem 0 0.6rem;
   font-size: 1rem;
   cursor: default;
 }

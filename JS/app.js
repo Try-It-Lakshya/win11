@@ -48,7 +48,7 @@ let percent = document.querySelector(".percent");
 
 navigator.getBattery().then(function (battery) {
   // percentage.style.width = battery.level * 100 + "%";
-  percent.innerHTML = battery.level * 100 + "%";
+  percent.innerHTML = Math.round(battery.level* 100) + "%";
 });
 
 // timeholder = document.querySelector(".timenow");
@@ -70,11 +70,11 @@ let n = weekday[now.getDay()];
 
 n = dayholder.innerHTML;*/
 
-let a;
-let date;
-let time;
-let hour;
-let minute;
+let a,
+date,
+time,
+hour,
+minute;
 const options = {
   year: "numeric",
   month: "numeric",
@@ -98,7 +98,7 @@ setInterval(() => {
 
   time = hour + ":" + minute;
 
-  document.getElementById("day").innerHTML = day;
+  // document.getElementById("day").innerHTML = day;
   document.getElementById("timenow").innerHTML = time;
   document.getElementById("date").innerHTML = date;
 }, 1000);
