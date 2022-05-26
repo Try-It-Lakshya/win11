@@ -1,7 +1,7 @@
 let start = document.getElementById("start");
 let startmenu = document.getElementsByClassName("startmenu")[0];
 
-let article = document.querySelector("article");
+let article = document.querySelector(".article");
 
 let closebtn = document.getElementById("closebtn");
 let minbtn = document.getElementById("minbtn");
@@ -15,8 +15,10 @@ start.addEventListener("click", () => {
   }
 });
 
+const bottom = article.style.bottom;
+
 open.addEventListener("click", () => {
-  if (article.style.bottom == "3rem") {
+  if (article.style.bottom == bottom) {
     article.style.bottom = "-40rem";
     article.style.transition = "0.8s";
   } else {
@@ -25,7 +27,7 @@ open.addEventListener("click", () => {
 });
 
 closebtn.addEventListener("click", () => {
-  article.style.bottom = "-100rem";
+  article.style.bottom = "-100rem ";
 });
 
 const header = document.getElementById("header");

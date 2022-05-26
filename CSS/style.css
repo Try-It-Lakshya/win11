@@ -5,6 +5,10 @@
   color: whitesmoke;
 }
 
+svg {
+  fill: fill="#c9c9c9" !important;
+}
+
 h4 {
   cursor: default;
   font-weight: 500;
@@ -150,32 +154,6 @@ body {
   width: 2rem;
 }
 
-/* start */
-.startmenu {
-  position: absolute;
-  bottom: -40rem;
-  width: 34rem;
-  z-index: 9;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-
-.startContent {
-  position: absolute;
-  left: 50%;
-  bottom: 3rem;
-  -webkit-transform: translate(-50%, 2rem);
-          transform: translate(-50%, 2rem);
-  width: 36rem;
-  background: #f6f6f6;
-  height: auto;
-  border-radius: 8px;
-  border: 1px solid #3f3f3f;
-  z-index: 9;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-
 /* video */
 #vid {
   width: 100%;
@@ -208,6 +186,45 @@ body {
   background: #ffffff21;
 }
 
+.taskbar-icon-wrap:active {
+  -webkit-animation: Taskber-icon-open 300ms ease-in;
+          animation: Taskber-icon-open 300ms ease-in;
+}
+
+@-webkit-keyframes Taskber-icon-open {
+  0% {
+    -webkit-transform: scale(75%) translateY(-3px);
+            transform: scale(75%) translateY(-3px);
+  }
+  50% {
+    -webkit-transform: translateY(-3px) scale(100%);
+            transform: translateY(-3px) scale(100%);
+  }
+}
+
+@keyframes Taskber-icon-open {
+  0% {
+    -webkit-transform: scale(75%) translateY(-3px);
+            transform: scale(75%) translateY(-3px);
+  }
+  50% {
+    -webkit-transform: translateY(-3px) scale(100%);
+            transform: translateY(-3px) scale(100%);
+  }
+}
+
+/*
+0%{
+    transform: scale(75%)translateY(-3px);
+  }
+  50%{
+    transform: translateY(-3px) scale(100%);
+  }
+0%{}
+45%{}
+90%{}
+100%{}
+*/
 .cover {
   cursor: default;
   display: -webkit-box;
@@ -392,17 +409,6 @@ body {
   cursor: default;
 }
 
-article {
-  width: 52rem;
-  /*JS Letral*/
-  height: 40rem;
-  position: absolute;
-  bottom: -40rem;
-  background: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
 #header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,11 +417,16 @@ article {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #f2f1f6;
+}
+
+.sidebar-item-text {
+  font-weight: 200;
+  font-size: .8rem;
 }
 
 .top-line {
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,7 +436,6 @@ article {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #edecf2;
 }
 
 .top-line .top-left {
@@ -435,7 +445,7 @@ article {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #edecf2;
+  background: transparent;
 }
 
 .top-line .top-right {
@@ -445,7 +455,7 @@ article {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #edecf2;
+  background: transparent;
   padding: 0.5rem;
 }
 
@@ -500,7 +510,12 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #c5c5c5;
-  background: #f2f1f6;
+}
+
+.explorer-header {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  -webkit-backdrop-filter: blur(32px) !important;
+          backdrop-filter: blur(32px) !important;
 }
 
 .tab-img {
@@ -516,6 +531,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #191919;
 }
 
 .aside {
@@ -567,8 +583,8 @@ h1 {
 
 .folder-title {
   padding: 0.3rem 0.5rem;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 300;
+  font-size: .85rem;
 }
 
 .folder-ico {

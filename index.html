@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Try CodeWithHarry</title>
+    <link rel="stylesheet" href="CSS/animation.css">
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
@@ -188,127 +189,129 @@
 
 
   <article class="article">
-    <div id="header">
-      <div class="top-line">
-        <div class="top-left">
-          <img src="Resource/Icons/explorer.png" alt="" class="ico title-icon">
-          <h5>File Explorer</h5>
+    <header class="explorer-header">
+      <div id="header">
+        <div class="top-line">
+          <div class="top-left">
+            <img src="Resource/Icons/explorer.png" alt="" class="ico title-icon">
+            <span>File Explorer</span>
+          </div>
+          <div class="top-right">
+            <button class="btn-origanl" id="minbtn">
+              <img src="Resource/SVG/minimize_black_48dp.svg" alt="">
+            </button>
+            <button class="btn-origanl">
+              <img src="Resource/SVG/crop_din_black_48dp.svg" alt="">
+            </button>
+            <button class="btn-origanl" id="closebtn">
+              <img src="Resource/SVG/close_black_48dp.svg" alt="">
+            </button>
+          </div>
         </div>
-        <div class="top-right">
-          <button class="btn-origanl" id="minbtn">
-            <img src="Resource/SVG/minimize_black_48dp.svg" alt="">
-          </button>
-          <button class="btn-origanl">
-            <img src="Resource/SVG/crop_din_black_48dp.svg" alt="">
-          </button>
-          <button class="btn-origanl" id="closebtn">
-            <img src="Resource/SVG/close_black_48dp.svg" alt="">
-          </button>
+      </div>
+      <div class="baseline">
+        <div class="tab">
+          <img class="tab-img" src="Resource/SVG/add_circle_outline_black_48dp.svg" alt="">
+          New Folder
+          <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
         </div>
-      </div>
-    </div>
-    <div class="baseline">
-      <div class="tab">
-        <img class="tab-img" src="Resource/SVG/add_circle_outline_black_48dp.svg" alt="">
-        New Folder
-        <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
-      </div>
-      <img class="tab-img" src="Resource/SVG/content_cut_black_24dp.svg" alt="">
-      <img class="tab-img" src="Resource/SVG/content_copy_black_48dp.svg" alt="">
-      <img class="tab-img" src="Resource/SVG/content_paste_black_48dp.svg" alt="">
-      <img class="tab-img" src="Resource/SVG/auto_stories.svg" alt="">
-      <img class="tab-img" src="Resource/SVG/shortcut_black_48dp.svg" alt="">
-      <img class="tab-img" src="Resource/SVG/delete_black_48dp.svg" alt="">
-      <div class="tab">
-          <img class="tab-img" src="Resource/SVG/mobiledata_off_black_48dp.svg" alt="">
-          Sort
-          <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
-      </div>
-      
-      <div class="tab">
-          <img class="tab-img" src="Resource/SVG/sort_black_48dp.svg" alt="">
-          View
-          <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
-      </div>
-      
-      <div class="tab">
-          <img class="tab-img" src="Resource/SVG/more_horiz_black_48dp.svg" alt="">
-      </div>
+        <img class="tab-img" src="Resource/SVG/content_cut_black_24dp.svg" alt="">
+        <img class="tab-img" src="Resource/SVG/content_copy_black_48dp.svg" alt="">
+        <img class="tab-img" src="Resource/SVG/content_paste_black_48dp.svg" alt="">
+        <img class="tab-img" src="Resource/SVG/auto_stories.svg" alt="">
+        <img class="tab-img" src="Resource/SVG/shortcut_black_48dp.svg" alt="">
+        <img class="tab-img" src="Resource/SVG/delete_black_48dp.svg" alt="">
+        <div class="tab">
+            <img class="tab-img" src="Resource/SVG/mobiledata_off_black_48dp.svg" alt="">
+            Sort
+            <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
+        </div>
+        
+        <div class="tab">
+            <img class="tab-img" src="Resource/SVG/sort_black_48dp.svg" alt="">
+            View
+            <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
+        </div>
+        
+        <div class="tab">
+            <img class="tab-img" src="Resource/SVG/more_horiz_black_48dp.svg" alt="">
+        </div>
 
 
-    </div>
+      </div>
+    </header>
     <div id="main">
       <aside class="aside">
         <div class="indent">
           <div class="bar">
             <img class="bar-ico" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
             <img class="bar-ico" src="Resource/Icons/weather.png" alt="">
-            <p>Quick access</p>
+            <p class="sidebar-item-text" >Quick access</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Desktop</p>
+            <p class="sidebar-item-text" >Desktop</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Downloads</p>
+            <p class="sidebar-item-text" >Downloads</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Documents</p>
+            <p class="sidebar-item-text" >Documents</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/image.png" alt="">
-            <p>Pictures</p>
+            <p class="sidebar-item-text" >Pictures</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/music.png" alt="">
-            <p>Music</p>
+            <p class="sidebar-item-text" >Music</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/game.png" alt="">
-            <p>Saved Games</p>
+            <p class="sidebar-item-text" >Saved Games</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Videos</p>
+            <p class="sidebar-item-text" >Videos</p>
           </div>
         </div>
         <div class="indent">
           <div class="bar">
             <img class="bar-ico" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
             <img class="bar-ico" src="Resource/Icons/thispc.png" alt="">
-            <p>This PC</p>
+            <p class="sidebar-item-text" >This PC</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Local Disk (C:)</p>
+            <p class="sidebar-item-text" >Local Disk (C:)</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Local Disk (D:)</p>
+            <p class="sidebar-item-text" >Local Disk (D:)</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Local Disk (E:)</p>
+            <p class="sidebar-item-text" >Local Disk (E:)</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Local Disk (F:)</p>
+            <p class="sidebar-item-text" >Local Disk (F:)</p>
           </div>
         </div>
         <div class="indent">
           <div class="bar">
             <img class="bar-ico" src="Resource/SVG/chevron_right_black_48dp.svg" alt="">
             <img class="bar-ico" src="Resource/Icons/OneDrive.png" alt="">
-            <p>OneDrive</p>
+            <p class="sidebar-item-text" >OneDrive</p>
           </div>
         </div>
         <div class="indent">
           <div class="bar">
             <img class="bar-ico" src="Resource/SVG/chevron_right_black_48dp.svg" alt="">
             <img class="bar-ico" src="Resource/Icons/OneNote.png" alt="">
-            <p>Network</p>
+            <p class="sidebar-item-text" >Network</p>
           </div>
         </div>
       </aside>
@@ -335,10 +338,6 @@
           <div class="folder">
             <img class="folder-ico" src="Resource/Icons/image.png" alt="">
             <h3 class="folder-title">Pictures</h3>
-          </div>
-          <div class="folder">
-            <img class="folder-ico" src="Resource/Icons/game.png" alt="">
-            <h3 class="folder-title">Saved Games</h3>
           </div>
           <div class="folder">
             <img class="folder-ico" src="Resource/Icons/explorer.png" alt="">
