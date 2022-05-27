@@ -1,16 +1,18 @@
 $icon-color : #c9c9c9;
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Roboto, Oxygen;
   color: whitesmoke;
+  cursor: default;
 }
 svg{
   fill:  fill="#c9c9c9"!important;
 }
 
 h4 {
-  cursor: default;
+  
   font-weight: 500;
   font-size: 14px;
 }
@@ -19,13 +21,22 @@ h4 {
   background-size: cover;
 }
 
-.btn-origanl {
-  color: black;
+.btn-origanl {    
   padding: 4px;
-  border: 1px solid #b1b1b1;
-  background: #f6f6f6;
-  border-radius: 4px;
-  cursor: pointer;
+  border: 0;
+  border-radius: 1px;
+  background: transparent;
+  cursor: pointer!important;
+  outline: 0;
+  &:last-child:hover{
+    background: #c42a1c8c;
+  }
+  &:hover{
+    background: #f0f8ff1c;
+  }
+  img{
+    cursor: pointer!important;
+  }
 }
 
 body {
@@ -149,6 +160,7 @@ body {
 
 .wrap {
   padding: 6px 6px;
+  transition: 250ms ease;
 }
 .taskbar-icon-wrap {
   padding: 8px 10px;
@@ -187,7 +199,7 @@ body {
 
 
 .cover {
-  cursor: default;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,7 +207,7 @@ body {
 }
 .wrap:hover {
   border-radius: 3px;
-  background: #f0f8ff2e;
+  background: #f0f8ff1c;
 }
 #start {
   transition: 300ms ease;
@@ -220,16 +232,49 @@ body {
   width: 35px;
 }
 .icon-name {
-  font-size: 13px;
-  cursor: default;
+  font-size: .83rem;
+  
 }
+
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.search-box{
+  font-size: .83rem;
+  padding: 6px 15px;
+  padding-left: 3rem;
+  text-align: start;
+  width: 26rem;
+  background: #202225;
+  border: 0px;
+  outline: 0px;
+  border-radius: 5px;
+  border-bottom: 2px solid #4cc2ff;
+  cursor: text;
+  // &::before{
+  //   content: url("Resource/SVG/refresh_black_48dp.svg");
+  //   position: relative;
+  //   left: -1rem;
+  // }
+}
+.search-ico{
+  position: absolute;
+  top: 1.5rem;
+  padding: 10px;
+  width: 25px;
+  cursor: text;
+}
+
 
 .top-bar {
   /* width: 100%; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 3rem;
+  padding: 0 3rem;
   padding-bottom: 1rem;
 }
 .recomended {
@@ -257,16 +302,20 @@ body {
 .app-info p {
   // color: #3f3f3f;
   font-size: 0.7rem;
-  cursor: default;
-}
-.app-text .app-desc {
-  cursor: default;
+  
 }
 .app-text {
   font-weight: 400;
 }
 .cell {
   display: flex;
+  transition: 250ms ease;
+  height: 33%;
+  align-items: center;
+  &:hover{
+    border-radius: 3px;
+    background: #f0f8ff2e;
+  }
 }
 
 .account {
@@ -288,20 +337,19 @@ body {
 }
 .user-box img {
   background-size: cover;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
   border-radius: 50%;
-  background: #e6e6e6;
-  border: 0.2px solid whitesmoke;
+  background: #e6e6e633;
 }
 .user-name {
   padding: 0 0.4rem 0 0.6rem;
-  font-size: 1rem;
-  cursor: default;
+  font-size: .83rem;
+  
 }
 .power-options img {
-  width: 2rem;
-  cursor: default;
+  width: 1.4rem;
+  
 }
 
 #header {
@@ -333,7 +381,6 @@ body {
     display: flex;
     align-items: center;
     background: transparent;
-    padding: 0.5rem;
   }
 }
 .top-line img {
@@ -351,7 +398,7 @@ body {
 } */
 
 .tab {
-  cursor: default;
+  
   display: flex;
   align-items: center;
 }

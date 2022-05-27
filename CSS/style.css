@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Segoe UI", Roboto, Oxygen;
   color: whitesmoke;
+  cursor: default;
 }
 
 svg {
@@ -10,7 +11,6 @@ svg {
 }
 
 h4 {
-  cursor: default;
   font-weight: 500;
   font-size: 14px;
 }
@@ -20,12 +20,24 @@ h4 {
 }
 
 .btn-origanl {
-  color: black;
   padding: 4px;
-  border: 1px solid #b1b1b1;
-  background: #f6f6f6;
-  border-radius: 4px;
-  cursor: pointer;
+  border: 0;
+  border-radius: 1px;
+  background: transparent;
+  cursor: pointer !important;
+  outline: 0;
+}
+
+.btn-origanl:last-child:hover {
+  background: #c42a1c8c;
+}
+
+.btn-origanl:hover {
+  background: #f0f8ff1c;
+}
+
+.btn-origanl img {
+  cursor: pointer !important;
 }
 
 body {
@@ -175,6 +187,8 @@ body {
 
 .wrap {
   padding: 6px 6px;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
 }
 
 .taskbar-icon-wrap {
@@ -226,7 +240,6 @@ body {
 100%{}
 */
 .cover {
-  cursor: default;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -242,7 +255,7 @@ body {
 
 .wrap:hover {
   border-radius: 3px;
-  background: #f0f8ff2e;
+  background: #f0f8ff1c;
 }
 
 #start {
@@ -276,8 +289,42 @@ body {
 }
 
 .icon-name {
-  font-size: 13px;
-  cursor: default;
+  font-size: .83rem;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem 0;
+}
+
+.search-box {
+  font-size: .83rem;
+  padding: 6px 15px;
+  padding-left: 3rem;
+  text-align: start;
+  width: 26rem;
+  background: #202225;
+  border: 0px;
+  outline: 0px;
+  border-radius: 5px;
+  border-bottom: 2px solid #4cc2ff;
+  cursor: text;
+}
+
+.search-ico {
+  position: absolute;
+  top: 1.5rem;
+  padding: 10px;
+  width: 25px;
+  cursor: text;
 }
 
 .top-bar {
@@ -291,7 +338,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2rem 3rem;
+  padding: 0 3rem;
   padding-bottom: 1rem;
 }
 
@@ -343,11 +390,6 @@ body {
 
 .app-info p {
   font-size: 0.7rem;
-  cursor: default;
-}
-
-.app-text .app-desc {
-  cursor: default;
 }
 
 .app-text {
@@ -358,6 +400,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
+  height: 33%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cell:hover {
+  border-radius: 3px;
+  background: #f0f8ff2e;
 }
 
 .account {
@@ -391,22 +444,19 @@ body {
 
 .user-box img {
   background-size: cover;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
   border-radius: 50%;
-  background: #e6e6e6;
-  border: 0.2px solid whitesmoke;
+  background: #e6e6e633;
 }
 
 .user-name {
   padding: 0 0.4rem 0 0.6rem;
-  font-size: 1rem;
-  cursor: default;
+  font-size: .83rem;
 }
 
 .power-options img {
-  width: 2rem;
-  cursor: default;
+  width: 1.4rem;
 }
 
 #header {
@@ -456,7 +506,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background: transparent;
-  padding: 0.5rem;
 }
 
 .top-line img {
@@ -473,7 +522,6 @@ body {
   border-right: 1px solid #c5c5c5;
 } */
 .tab {
-  cursor: default;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

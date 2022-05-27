@@ -7,27 +7,69 @@ let closebtn = document.getElementById("closebtn");
 let minbtn = document.getElementById("minbtn");
 let open = document.getElementById("open");
 
+var startclicked = 0;
+
 start.addEventListener("click", () => {
-  if (startmenu.style.bottom == "-40rem") {
-    startmenu.style.bottom = "3rem";
-  } else {
-    startmenu.style.bottom = "-40rem";
+  startclicked += 1
+  startmenu.style.bottom = "3rem";
+  
+  if (startclicked == 2) {
+
+    startmenu.style.bottom = "-50rem";
+    startclicked = 0
   }
 });
 
 const bottom = article.style.bottom;
+var explorerClicked = 0
+
 
 open.addEventListener("click", () => {
-  if (article.style.bottom == bottom) {
-    article.style.bottom = "-40rem";
-    article.style.transition = "0.8s";
-  } else {
-    article.style.bottom = "3rem";
+  explorerClicked += 1
+  // article.classList.add("open-animation")
+  // article.classList.remove("close-animation")
+  article.style.transform = "scale(1)"
+  article.style.opacity = "1"
+  article.style.bottom = "3rem";
+
+  if (explorerClicked == 2) {
+
+    article.style.transform = "scale(0)"
+    article.style.bottom = "-50rem";
+    article.style.opacity = "0"
+    // article.classList.remove("open-animation")
+    // article.classList.add("close-animation")
+    explorerClicked = 0
   }
+  // if (article.style.bottom == bottom) {
+  //   article.style.bottom = "-50rem";
+  //   article.style.transition = "0.4s ease-in";
+  // } else {
+  //   article.style.bottom = "3rem";
+  //   article.style.transition = "0.6s ease-in";
+  // }
 });
 
+minbtn.addEventListener("click", () => {
+  article.style.bottom = "-50rem ";
+  
+  article.style.transform = "scale(0)"
+  article.style.opacity = "0"
+  // setTimeout(() => {
+    
+  // }, 200);
+  explorerClicked = 0
+});
 closebtn.addEventListener("click", () => {
-  article.style.bottom = "-100rem ";
+  
+  // article.style.transform = "scale(0)"
+  article.style.opacity = "0"
+  article.style.transition = ".01s ease!important"
+  setTimeout(() => {
+    article.style.bottom = "-50rem ";
+    
+  }, 300);
+  explorerClicked = 0
 });
 
 const header = document.getElementById("header");
