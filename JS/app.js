@@ -1,7 +1,7 @@
 let start = document.getElementById("start");
 let startmenu = document.getElementsByClassName("startmenu")[0];
 
-let article = document.querySelector(".article");
+const article = document.querySelector(".article");
 
 let closebtn = document.getElementById("closebtn");
 let minbtn = document.getElementById("minbtn");
@@ -26,8 +26,6 @@ var explorerClicked = 0
 
 open.addEventListener("click", () => {
   explorerClicked += 1
-  // article.classList.add("open-animation")
-  // article.classList.remove("close-animation")
   article.style.transform = "scale(1)"
   article.style.opacity = "1"
   article.style.bottom = "3rem";
@@ -37,17 +35,8 @@ open.addEventListener("click", () => {
     article.style.transform = "scale(0)"
     article.style.bottom = "-50rem";
     article.style.opacity = "0"
-    // article.classList.remove("open-animation")
-    // article.classList.add("close-animation")
     explorerClicked = 0
   }
-  // if (article.style.bottom == bottom) {
-  //   article.style.bottom = "-50rem";
-  //   article.style.transition = "0.4s ease-in";
-  // } else {
-  //   article.style.bottom = "3rem";
-  //   article.style.transition = "0.6s ease-in";
-  // }
 });
 
 minbtn.addEventListener("click", () => {
@@ -55,14 +44,10 @@ minbtn.addEventListener("click", () => {
   
   article.style.transform = "scale(0)"
   article.style.opacity = "0"
-  // setTimeout(() => {
-    
-  // }, 200);
   explorerClicked = 0
 });
 closebtn.addEventListener("click", () => {
   
-  // article.style.transform = "scale(0)"
   article.style.opacity = "0"
   article.style.transition = ".01s ease!important"
   setTimeout(() => {
@@ -72,20 +57,104 @@ closebtn.addEventListener("click", () => {
   explorerClicked = 0
 });
 
-const header = document.getElementById("header");
 
-header.addEventListener("mousedown", () => {
-  header.addEventListener("mousemove", update);
 
-  window.addEventListener("mouseup", () => {
-    header.removeEventListener("mousemove", update);
-  });
-});
 
-function update(ev) {
-  article.style.setProperty("left", `${ev.x - 200}px`);
-  article.style.setProperty("top", `${ev.y - 25}px`);
-}
+////////////////////DRAGGGGGGGGGGGG LOGIIIIIIIICCCCCCCCCCCC
+
+
+ // Make the DIV element draggable:
+ dragElement(document.getElementById("mydiv"));
+
+ function dragElement(elmnt) {
+   var pos1 = 0,
+     pos2 = 0,
+     pos3 = 0,
+     pos4 = 0;
+   if (document.getElementById(elmnt.id + "header")) {
+     // if present, the header is where you move the DIV from:
+     document.getElementById(elmnt.id + "header").onmousedown =
+       dragMouseDown;
+   } else {
+     // otherwise, move the DIV from anywhere inside the DIV:
+     elmnt.onmousedown = dragMouseDown;
+   }
+
+   function dragMouseDown(e) {
+     e = e || window.event;
+     e.preventDefault();
+     // get the mouse cursor position at startup:
+     pos3 = e.clientX;
+     pos4 = e.clientY;
+     document.onmouseup = closeDragElement;
+     // call a function whenever the cursor moves:
+     document.onmousemove = elementDrag;
+   }
+
+   function elementDrag(e) {
+     e = e || window.event;
+     e.preventDefault();
+     // calculate the new cursor position:
+     pos1 = pos3 - e.clientX;
+     pos2 = pos4 - e.clientY;
+     pos3 = e.clientX;
+     pos4 = e.clientY;
+     // set the element's new position:
+     elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+     elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+   }
+
+   function closeDragElement() {
+     // stop moving when mouse button is released:
+     document.onmouseup = null;
+     document.onmousemove = null;
+   }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header = article.querySelector("header");
+
+
+// function onDrag({movementX,movementY}){
+//   let getStyle = window.getComputedStyle(header);
+//   let left = parseInt(getStyle.left);
+//   let top = parseInt(getStyle.top);
+//   // console.log(left, top);
+//   wrapper.style.left = `${left + movementX}px`;
+//   wrapper.style.top = `${top + movementY}px`;
+
+// }
+
+
+// header.addEventListener("mousedown", () => {
+//   header.addEventListener("mousemove", onDrag);
+// });
+
+// window.addEventListener("mouseup", () => {
+//   header.removeEventListener("mousemove", onDrag);
+// });
+
+// function update(ev) {
+//   article.style.setProperty("left", `${ev.x - 200}px`);
+//   article.style.setProperty("top", `${ev.y - 25}px`);
+// }
 
 let percentage = document.querySelector("percentage");
 let percent = document.querySelector(".percent");
@@ -95,24 +164,45 @@ navigator.getBattery().then(function (battery) {
   percent.innerHTML = Math.round(battery.level* 100) + "%";
 });
 
-// timeholder = document.querySelector(".timenow");
-/*
-let now = new Date();
 
-dayholder = document.getElementById("day");
 
-let weekday = new Array(7);
-weekday[0] = "Sunday";
-weekday[1] = "Monday";
-weekday[2] = "Tuesday";
-weekday[3] = "Wednesday";
-weekday[4] = "Thursday";
-weekday[5] = "Friday";
-weekday[6] = "Saturday";
 
-let n = weekday[now.getDay()];
 
-n = dayholder.innerHTML;*/
+
+
+
+
+
+
+
+/////////// Tray time
+const okay = document.getElementById("okay");
+const bg = document.getElementById("background-image");
+okay.addEventListener("click",()=>{
+  var backUrl = document.getElementById("url-box").value;
+  if(backUrl==""){
+    bg.setAttribute("src", "Resource/6233787.jpg");
+  }else{
+
+    bg.setAttribute("src", backUrl);
+  }
+  console.log(backUrl);
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let a,
 date,

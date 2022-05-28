@@ -1,4 +1,5 @@
 $icon-color : #c9c9c9;
+$hover-colour: #f0f8ff1c;
 
 * {
   margin: 0;
@@ -24,6 +25,20 @@ h4 {
 .btn-origanl {    
   padding: 4px;
   border: 0;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer!important;
+  outline: 0;
+  &:hover{
+    background: #f0f8ff1c;
+  }
+  img{
+    cursor: pointer!important;
+  }
+}
+.btn-topbar {    
+  padding: 4px;
+  border: 0;
   border-radius: 1px;
   background: transparent;
   cursor: pointer!important;
@@ -33,9 +48,6 @@ h4 {
   }
   &:hover{
     background: #f0f8ff1c;
-  }
-  img{
-    cursor: pointer!important;
   }
 }
 

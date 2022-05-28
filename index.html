@@ -12,6 +12,13 @@
     <div class="background">
       <img id="background-image" src="Resource/6233787.jpg" alt="" />
     </div>
+    <div id="mydiv">
+      <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+      <div id="mydivheader">Click here to move</div>
+      <p>Move</p>
+      <p>this</p>
+      <p>DIV</p>
+    </div>
     
     <div class="taskbar theme">
       <div class="center">
@@ -42,16 +49,22 @@
       <!-- <img class="right" src="Resource/Original/taskbarright.PNG" alt="" /> -->
       <div class="right">
         <div class="right-side">
+          
+          <div class="tray-wrap">
 
-          <img src="./Resource/SVG/expand.svg" class="expand right-icon"  alt="..." >
+            <img src="./Resource/SVG/expand.svg" class="expand right-icon"  alt="..." >
+          </div>
+          <div class="tray-wrap">
+            
+            <div class="percent"></div>
+            
+            <img src="./Resource/SVG/expand.svg" class="sound right-icon"  alt="..." >
+            <span>____</span>
+            
+            <img src="./Resource/SVG/expand.svg" class="network right-icon"  alt="..." >
+          </div>
           
-          <div class="percent"></div>
-          
-          <img src="./Resource/SVG/expand.svg" class="sound right-icon"  alt="..." >
-          
-          <img src="./Resource/SVG/expand.svg" class="network right-icon"  alt="..." >
-          
-          <div class="time">
+          <div class="time tray-wrap">
             <span id="timenow"></span>
             <span id="day"></span>
             <span id="date">28-06-2021</span>
@@ -59,24 +72,27 @@
         </div>
 <!---->    <button class="show-desktop"></button></div>
     </div>
+
     <div class="notify-sys">
       <span class="setting">
         <!-- <input type="text" placeholder="Enter Url Of Wallpaper"> -->
         <div class="setting-cont">
           <label for="url-box">Change Wallpaper</label>
           <input class="picture-url" type="url" name="url" id="url-box" placeholder="Enter Url of Wallpaper">
+          <input class="btn-origanl" id="okay" type="submit" value="okay">
         </div>
         <div class="setting-cont">
           <label for="text-size">Font Size</label>
           <input type="range" class="font-slider" name="text-size" id="text-size" value="40">
         </div>
         <div class="setting-cont">
-          <label for="mode">Change Mode Light/Dark</label>
-          <span>
-            Light
+          <label id="mode-lable" for="mode">Change Mode Light/Dark</label>
+          <!-- <span>
+            Light -->
             <input type="checkbox" class="btn-slider" name="mode" id="mode">
-            Dark
-          </span>
+            <span id="span"></span>
+            <!-- Dark
+          </span> -->
         </div>
 
       </span>
@@ -206,22 +222,22 @@
     </div>
 
 
-  <article class="article">
+  <article class="article" id="article">
     <header class="explorer-header">
       <div id="header">
-        <div class="top-line">
+        <div class="top-line"id="handle-bar">
           <div class="top-left">
             <img src="Resource/Icons/explorer.png" alt="" class="ico title-icon">
             <span>File Explorer</span>
           </div>
           <div class="top-right">
-            <button class="btn-origanl" id="minbtn">
+            <button class="btn-topbar" id="minbtn">
               <img src="Resource/SVG/minimize_black_48dp.svg" alt="">
             </button>
-            <button class="btn-origanl">
+            <button class="btn-topbar">
               <img src="Resource/SVG/crop_din_black_48dp.svg" alt="">
             </button>
-            <button class="btn-origanl" id="closebtn">
+            <button class="btn-topbar" id="closebtn">
               <img src="Resource/SVG/close_black_48dp.svg" alt="">
             </button>
           </div>

@@ -22,14 +22,10 @@ h4 {
 .btn-origanl {
   padding: 4px;
   border: 0;
-  border-radius: 1px;
+  border-radius: 4px;
   background: transparent;
   cursor: pointer !important;
   outline: 0;
-}
-
-.btn-origanl:last-child:hover {
-  background: #c42a1c8c;
 }
 
 .btn-origanl:hover {
@@ -38,6 +34,23 @@ h4 {
 
 .btn-origanl img {
   cursor: pointer !important;
+}
+
+.btn-topbar {
+  padding: 4px;
+  border: 0;
+  border-radius: 1px;
+  background: transparent;
+  cursor: pointer !important;
+  outline: 0;
+}
+
+.btn-topbar:last-child:hover {
+  background: #c42a1c8c;
+}
+
+.btn-topbar:hover {
+  background: #f0f8ff1c;
 }
 
 body {
