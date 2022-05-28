@@ -3,10 +3,14 @@
   padding: 0;
   font-family: "Segoe UI", Roboto, Oxygen;
   color: whitesmoke;
+  cursor: default;
+}
+
+svg {
+  fill: fill="#c9c9c9" !important;
 }
 
 h4 {
-  cursor: default;
   font-weight: 500;
   font-size: 14px;
 }
@@ -16,12 +20,37 @@ h4 {
 }
 
 .btn-origanl {
-  color: black;
   padding: 4px;
-  border: 1px solid #b1b1b1;
-  background: #f6f6f6;
+  border: 0;
   border-radius: 4px;
-  cursor: pointer;
+  background: transparent;
+  cursor: pointer !important;
+  outline: 0;
+}
+
+.btn-origanl:hover {
+  background: #f0f8ff1c;
+}
+
+.btn-origanl img {
+  cursor: pointer !important;
+}
+
+.btn-topbar {
+  padding: 4px;
+  border: 0;
+  border-radius: 1px;
+  background: transparent;
+  cursor: pointer !important;
+  outline: 0;
+}
+
+.btn-topbar:last-child:hover {
+  background: #c42a1c8c;
+}
+
+.btn-topbar:hover {
+  background: #f0f8ff1c;
 }
 
 body {
@@ -150,32 +179,6 @@ body {
   width: 2rem;
 }
 
-/* start */
-.startmenu {
-  position: absolute;
-  bottom: -40rem;
-  width: 34rem;
-  z-index: 9;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-
-.startContent {
-  position: absolute;
-  left: 50%;
-  bottom: 3rem;
-  -webkit-transform: translate(-50%, 2rem);
-          transform: translate(-50%, 2rem);
-  width: 36rem;
-  background: #f6f6f6;
-  height: auto;
-  border-radius: 8px;
-  border: 1px solid #3f3f3f;
-  z-index: 9;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-
 /* video */
 #vid {
   width: 100%;
@@ -197,6 +200,8 @@ body {
 
 .wrap {
   padding: 6px 6px;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
 }
 
 .taskbar-icon-wrap {
@@ -208,8 +213,46 @@ body {
   background: #ffffff21;
 }
 
+.taskbar-icon-wrap:active {
+  -webkit-animation: Taskber-icon-open 300ms ease-in;
+          animation: Taskber-icon-open 300ms ease-in;
+}
+
+@-webkit-keyframes Taskber-icon-open {
+  0% {
+    -webkit-transform: scale(75%) translateY(-3px);
+            transform: scale(75%) translateY(-3px);
+  }
+  50% {
+    -webkit-transform: translateY(-3px) scale(100%);
+            transform: translateY(-3px) scale(100%);
+  }
+}
+
+@keyframes Taskber-icon-open {
+  0% {
+    -webkit-transform: scale(75%) translateY(-3px);
+            transform: scale(75%) translateY(-3px);
+  }
+  50% {
+    -webkit-transform: translateY(-3px) scale(100%);
+            transform: translateY(-3px) scale(100%);
+  }
+}
+
+/*
+0%{
+    transform: scale(75%)translateY(-3px);
+  }
+  50%{
+    transform: translateY(-3px) scale(100%);
+  }
+0%{}
+45%{}
+90%{}
+100%{}
+*/
 .cover {
-  cursor: default;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,7 +268,7 @@ body {
 
 .wrap:hover {
   border-radius: 3px;
-  background: #f0f8ff2e;
+  background: #f0f8ff1c;
 }
 
 #start {
@@ -259,8 +302,42 @@ body {
 }
 
 .icon-name {
-  font-size: 13px;
-  cursor: default;
+  font-size: .83rem;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem 0;
+}
+
+.search-box {
+  font-size: .83rem;
+  padding: 6px 15px;
+  padding-left: 3rem;
+  text-align: start;
+  width: 26rem;
+  background: #202225;
+  border: 0px;
+  outline: 0px;
+  border-radius: 5px;
+  border-bottom: 2px solid #4cc2ff;
+  cursor: text;
+}
+
+.search-ico {
+  position: absolute;
+  top: 1.5rem;
+  padding: 10px;
+  width: 25px;
+  cursor: text;
 }
 
 .top-bar {
@@ -274,7 +351,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2rem 3rem;
+  padding: 0 3rem;
   padding-bottom: 1rem;
 }
 
@@ -326,11 +403,6 @@ body {
 
 .app-info p {
   font-size: 0.7rem;
-  cursor: default;
-}
-
-.app-text .app-desc {
-  cursor: default;
 }
 
 .app-text {
@@ -341,6 +413,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
+  height: 33%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cell:hover {
+  border-radius: 3px;
+  background: #f0f8ff2e;
 }
 
 .account {
@@ -374,33 +457,19 @@ body {
 
 .user-box img {
   background-size: cover;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
   border-radius: 50%;
-  background: #e6e6e6;
-  border: 0.2px solid whitesmoke;
+  background: #e6e6e633;
 }
 
 .user-name {
   padding: 0 0.4rem 0 0.6rem;
-  font-size: 1rem;
-  cursor: default;
+  font-size: .83rem;
 }
 
 .power-options img {
-  width: 2rem;
-  cursor: default;
-}
-
-article {
-  width: 52rem;
-  /*JS Letral*/
-  height: 40rem;
-  position: absolute;
-  bottom: -40rem;
-  background: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
+  width: 1.4rem;
 }
 
 #header {
@@ -411,11 +480,16 @@ article {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #f2f1f6;
+}
+
+.sidebar-item-text {
+  font-weight: 200;
+  font-size: .8rem;
 }
 
 .top-line {
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,7 +499,6 @@ article {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #edecf2;
 }
 
 .top-line .top-left {
@@ -435,7 +508,7 @@ article {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #edecf2;
+  background: transparent;
 }
 
 .top-line .top-right {
@@ -445,8 +518,7 @@ article {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #edecf2;
-  padding: 0.5rem;
+  background: transparent;
 }
 
 .top-line img {
@@ -463,7 +535,6 @@ article {
   border-right: 1px solid #c5c5c5;
 } */
 .tab {
-  cursor: default;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -500,7 +571,12 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #c5c5c5;
-  background: #f2f1f6;
+}
+
+.explorer-header {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  -webkit-backdrop-filter: blur(32px) !important;
+          backdrop-filter: blur(32px) !important;
 }
 
 .tab-img {
@@ -516,6 +592,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #191919;
 }
 
 .aside {
@@ -567,8 +644,8 @@ h1 {
 
 .folder-title {
   padding: 0.3rem 0.5rem;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 300;
+  font-size: .85rem;
 }
 
 .folder-ico {

@@ -1,0 +1,184 @@
+article {
+  width: 52rem; /*JS Letral*/
+  height: 40rem;
+  position: absolute;
+  bottom: -40rem;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s ease-in;
+}
+
+/* start */
+
+.startmenu {
+  position: absolute;
+  bottom: -50rem;
+  width: 34rem;
+  // text-align: center;
+  z-index: 9;
+  transition: all 0.3s ease-in;
+}
+
+.startContent {
+  position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  transform: translate(-50%, 2rem);
+  width: 36rem;
+  background: #f6f6f6;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid#3f3f3f;
+  z-index: 9;
+  transition: all 3s ease-in;
+}
+
+// 0%{
+//   transform: scale(75%)translateY(-3px);
+// }
+// 50%{
+//   transform: translateY(-3px) scale(100%);
+// }
+.open-explorer-animation:active {
+  animation: explorer-icon-open 200ms ease-in;
+}
+@keyframes explorer-icon-open {
+  0% {
+    display: block;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 3rem;
+  }
+}
+.close-explorer-animation {
+  animation: explorer-icon-close 200ms ease-in;
+}
+@keyframes explorer-icon-close {
+  0% {
+    bottom: -40rem;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+.close-animation {
+  animation: close-animation 300ms ease-in;
+}
+@keyframes close-animation {
+  0% {
+    bottom: -50rem;
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+.open-animation {
+  animation: close-animation 300ms ease-in;
+}
+@keyframes open-animation {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 3rem;
+  }
+}
+
+.notify-sys {
+  position: absolute;
+  bottom: 3.7rem;
+  right: 1rem;
+}
+.setting {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: rgba(240, 248, 255, 0.1);
+  backdrop-filter: blur(19px);
+  border-radius: 4px;
+}
+.picture-url {
+  font-size: 16px;
+  padding: 6px 15px;
+  text-align: start;
+  min-width: 20rem;
+  background: #202225;
+  border: 0px;
+  outline: 0px;
+  border-radius: 5px;
+  border-bottom: 2px solid #34ade9;
+  cursor: text;
+  &:hover {
+    border-bottom: 2px solid #0f97db;
+  }
+  // &:valid{
+  //     border-bottom: 2px solid #4cff88;
+  // }
+  // &:invalid{
+  //     border-bottom: 2px solid #ff7f4c;
+  // }
+}
+.setting-cont {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  .font-slider {
+    padding: 2px;
+    ::-webkit-progress-bar {
+      background-color: blue;
+    }
+  }
+  //   .btn-slider{
+
+  //   }
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196f3;
+  color: #fff;
+}
+.tray-wrap {
+  height: 100%;
+//   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+  &:hover {
+    border-radius: 3px;
+    background: #f0f8ff1c;
+  }
+}
+
+
+
+
+// ----------------CUSTOM CHECKBOXX SCSS HERE
+// Lable #mode-lable
+// span #span

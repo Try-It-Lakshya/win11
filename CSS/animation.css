@@ -1,0 +1,250 @@
+article {
+  width: 52rem;
+  /*JS Letral*/
+  height: 40rem;
+  position: absolute;
+  bottom: -40rem;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+/* start */
+.startmenu {
+  position: absolute;
+  bottom: -50rem;
+  width: 34rem;
+  z-index: 9;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.startContent {
+  position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  -webkit-transform: translate(-50%, 2rem);
+          transform: translate(-50%, 2rem);
+  width: 36rem;
+  background: #f6f6f6;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #3f3f3f;
+  z-index: 9;
+  -webkit-transition: all 3s ease-in;
+  transition: all 3s ease-in;
+}
+
+.open-explorer-animation:active {
+  -webkit-animation: explorer-icon-open 200ms ease-in;
+          animation: explorer-icon-open 200ms ease-in;
+}
+
+@-webkit-keyframes explorer-icon-open {
+  0% {
+    display: block;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 3rem;
+  }
+}
+
+@keyframes explorer-icon-open {
+  0% {
+    display: block;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 3rem;
+  }
+}
+
+.close-explorer-animation {
+  -webkit-animation: explorer-icon-close 200ms ease-in;
+          animation: explorer-icon-close 200ms ease-in;
+}
+
+@-webkit-keyframes explorer-icon-close {
+  0% {
+    bottom: -40rem;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes explorer-icon-close {
+  0% {
+    bottom: -40rem;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+.close-animation {
+  -webkit-animation: close-animation 300ms ease-in;
+          animation: close-animation 300ms ease-in;
+}
+
+@-webkit-keyframes close-animation {
+  0% {
+    bottom: -50rem;
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes close-animation {
+  0% {
+    bottom: -50rem;
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+.open-animation {
+  -webkit-animation: close-animation 300ms ease-in;
+          animation: close-animation 300ms ease-in;
+}
+
+@-webkit-keyframes open-animation {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 3rem;
+  }
+}
+
+@keyframes open-animation {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 3rem;
+  }
+}
+
+.notify-sys {
+  position: absolute;
+  bottom: 3.7rem;
+  right: 1rem;
+}
+
+.setting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  background: rgba(240, 248, 255, 0.1);
+  -webkit-backdrop-filter: blur(19px);
+          backdrop-filter: blur(19px);
+  border-radius: 4px;
+}
+
+.picture-url {
+  font-size: 16px;
+  padding: 6px 15px;
+  text-align: start;
+  min-width: 20rem;
+  background: #202225;
+  border: 0px;
+  outline: 0px;
+  border-radius: 5px;
+  border-bottom: 2px solid #34ade9;
+  cursor: text;
+}
+
+.picture-url:hover {
+  border-bottom: 2px solid #0f97db;
+}
+
+.setting-cont {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.setting-cont .font-slider {
+  padding: 2px;
+}
+
+.setting-cont .font-slider ::-webkit-progress-bar {
+  background-color: blue;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.tray-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: auto;
+}
+
+.tray-wrap:hover {
+  border-radius: 3px;
+  background: #f0f8ff1c;
+}
+/*# sourceMappingURL=animation.css.map */

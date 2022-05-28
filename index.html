@@ -4,25 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Try CodeWithHarry</title>
+    <title>Lamo Windows 11</title>
+    <link rel="stylesheet" href="CSS/animation.css">
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
     <div class="background">
       <img id="background-image" src="Resource/6233787.jpg" alt="" />
     </div>
-    <!-- <video id="vid" autoplay muted>
-      <source src="Resource/video/video.webm" type="video/webm">
-    </video> -->
-    <!-- <div class="icons">
-        <img src="Resource/Icons/recyclebinicon.png" alt="">
-        <div>Recycle Bin</div>
-    </div> -->
+    <div id="mydiv">
+      <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+      <div id="mydivheader">Click here to move</div>
+      <p>Move</p>
+      <p>this</p>
+      <p>DIV</p>
+    </div>
+    
     <div class="taskbar theme">
       <div class="center">
         <a>
           
-          <img id="start" class="ico taskbar-icon-wrap" src="Resource/Icons/start.png" alt=""/>
+          <img id="start" class="ico taskbar-icon-wrap" src="Resource/2021-08-12-ts3_thumbs-9cf-p_256.webp" alt=""/>
           <!-- <img id="start" src="https://img.icons8.com/nolan/64/windows-logo.png"/> -->
       </a>
         <a id="open">
@@ -47,29 +49,62 @@
       <!-- <img class="right" src="Resource/Original/taskbarright.PNG" alt="" /> -->
       <div class="right">
         <div class="right-side">
+          
+          <div class="tray-wrap">
 
-          <img src="./Resource/SVG/expand.svg" class="expand right-icon"  alt="..." >
+            <img src="./Resource/SVG/expand.svg" class="expand right-icon"  alt="..." >
+          </div>
+          <div class="tray-wrap">
+            
+            <div class="percent"></div>
+            
+            <img src="./Resource/SVG/expand.svg" class="sound right-icon"  alt="..." >
+            <span>____</span>
+            
+            <img src="./Resource/SVG/expand.svg" class="network right-icon"  alt="..." >
+          </div>
           
-          <div class="percent"></div>
-          
-          <img src="./Resource/SVG/expand.svg" class="sound right-icon"  alt="..." >
-          
-          <img src="./Resource/SVG/expand.svg" class="network right-icon"  alt="..." >
-          
-          <div class="time">
+          <div class="time tray-wrap">
             <span id="timenow"></span>
             <span id="day"></span>
             <span id="date">28-06-2021</span>
           </div>
         </div>
-        <button class="show-desktop"></button></div>
+<!---->    <button class="show-desktop"></button></div>
+    </div>
+
+    <div class="notify-sys">
+      <span class="setting">
+        <!-- <input type="text" placeholder="Enter Url Of Wallpaper"> -->
+        <div class="setting-cont">
+          <label for="url-box">Change Wallpaper</label>
+          <input class="picture-url" type="url" name="url" id="url-box" placeholder="Enter Url of Wallpaper">
+          <input class="btn-origanl" id="okay" type="submit" value="okay">
+        </div>
+        <div class="setting-cont">
+          <label for="text-size">Font Size</label>
+          <input type="range" class="font-slider" name="text-size" id="text-size" value="40">
+        </div>
+        <div class="setting-cont">
+          <label id="mode-lable" for="mode">Change Mode Light/Dark</label>
+          <!-- <span>
+            Light -->
+            <input type="checkbox" class="btn-slider" name="mode" id="mode">
+            <span id="span"></span>
+            <!-- Dark
+          </span> -->
+        </div>
+
+      </span>
     </div>
 
     <div class="startmenu">
       <div class="startContent theme">
         
         <div class="search">
-          <img src="#" alt="" class="search-ico">
+          <label for="search-ico">
+            <img src="Resource/icons-1/utilities-log-viewer.svg" alt="" class="search-ico">
+          </label>
           <input type="text" class="search-box" placeholder="Type Here To Search">
         </div>
         <div class="top-bar">
@@ -110,7 +145,7 @@
           </div>
           <div class="cover">
             <div class ="wrap"> <img class="icon ico" src="Resource/Icons/Visual_Studio_Code.png" alt="" /></img>
-              <span class="icon-name">VS Code</span>
+              <span class="icon-name">VS-Code</span>
             </div>
           </div>
           <div class="cover">
@@ -177,138 +212,140 @@
 
         <div class="account">
           <div class="user-box wrap">
-            <img src="Resource/Icons/admin.png" alt="" />
-            <p class="user-name icon-name">Harry</p>
+            <img src="Resource/sus.gif" alt="" />
+            <p class="user-name icon-name">Neptune</p>
           </div>
-          <div class="power-options"><img src="Resource/SVG/power.svg" alt=""></div>
+          <div class="power-options"><img class="wrap" src="Resource/SVG/power.svg" alt=""></div>
         </div>
       </div>
 
     </div>
 
 
-  <article class="article">
-    <div id="header">
-      <div class="top-line">
-        <div class="top-left">
-          <img src="Resource/Icons/explorer.png" alt="" class="ico title-icon">
-          <h5>File Explorer</h5>
-        </div>
-        <div class="top-right">
-          <button class="btn-origanl" id="minbtn">
-            <img src="Resource/SVG/minimize_black_48dp.svg" alt="">
-          </button>
-          <button class="btn-origanl">
-            <img src="Resource/SVG/crop_din_black_48dp.svg" alt="">
-          </button>
-          <button class="btn-origanl" id="closebtn">
-            <img src="Resource/SVG/close_black_48dp.svg" alt="">
-          </button>
+  <article class="article" id="article">
+    <header class="explorer-header">
+      <div id="header">
+        <div class="top-line"id="handle-bar">
+          <div class="top-left">
+            <img src="Resource/Icons/explorer.png" alt="" class="ico title-icon">
+            <span>File Explorer</span>
+          </div>
+          <div class="top-right">
+            <button class="btn-topbar" id="minbtn">
+              <img src="Resource/SVG/minimize_black_48dp.svg" alt="">
+            </button>
+            <button class="btn-topbar">
+              <img src="Resource/SVG/crop_din_black_48dp.svg" alt="">
+            </button>
+            <button class="btn-topbar" id="closebtn">
+              <img src="Resource/SVG/close_black_48dp.svg" alt="">
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="baseline">
-      <div class="tab">
-        <img class="tab-img" src="Resource/SVG/add_circle_outline_black_48dp.svg" alt="">
-        New Folder
-        <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
-      </div>
-      <img class="tab-img" src="Resource/SVG/content_cut_black_24dp.svg" alt="">
-      <img class="tab-img" src="Resource/SVG/content_copy_black_48dp.svg" alt="">
-      <img class="tab-img" src="Resource/SVG/content_paste_black_48dp.svg" alt="">
-      <img class="tab-img" src="Resource/SVG/auto_stories.svg" alt="">
-      <img class="tab-img" src="Resource/SVG/shortcut_black_48dp.svg" alt="">
-      <img class="tab-img" src="Resource/SVG/delete_black_48dp.svg" alt="">
-      <div class="tab">
-          <img class="tab-img" src="Resource/SVG/mobiledata_off_black_48dp.svg" alt="">
-          Sort
+      <div class="baseline">
+        <div class="tab">
+          <img class="tab-img" src="Resource/SVG/add_circle_outline_black_48dp.svg" alt="">
+          New Folder
           <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
-      </div>
-      
-      <div class="tab">
-          <img class="tab-img" src="Resource/SVG/sort_black_48dp.svg" alt="">
-          View
-          <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
-      </div>
-      
-      <div class="tab">
-          <img class="tab-img" src="Resource/SVG/more_horiz_black_48dp.svg" alt="">
-      </div>
+        </div>
+        <img class="tab-img" src="Resource/SVG/content_cut_black_24dp.svg" alt="">
+        <img class="tab-img" src="Resource/SVG/content_copy_black_48dp.svg" alt="">
+        <img class="tab-img" src="Resource/SVG/content_paste_black_48dp.svg" alt="">
+        <img class="tab-img" src="Resource/SVG/auto_stories.svg" alt="">
+        <img class="tab-img" src="Resource/SVG/shortcut_black_48dp.svg" alt="">
+        <img class="tab-img" src="Resource/SVG/delete_black_48dp.svg" alt="">
+        <div class="tab">
+            <img class="tab-img" src="Resource/SVG/mobiledata_off_black_48dp.svg" alt="">
+            Sort
+            <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
+        </div>
+        
+        <div class="tab">
+            <img class="tab-img" src="Resource/SVG/sort_black_48dp.svg" alt="">
+            View
+            <img class="tab-img" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
+        </div>
+        
+        <div class="tab">
+            <img class="tab-img" src="Resource/SVG/more_horiz_black_48dp.svg" alt="">
+        </div>
 
 
-    </div>
+      </div>
+    </header>
     <div id="main">
       <aside class="aside">
         <div class="indent">
           <div class="bar">
             <img class="bar-ico" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
             <img class="bar-ico" src="Resource/Icons/weather.png" alt="">
-            <p>Quick access</p>
+            <p class="sidebar-item-text" >Quick access</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Desktop</p>
+            <p class="sidebar-item-text" >Desktop</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Downloads</p>
+            <p class="sidebar-item-text" >Downloads</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Documents</p>
+            <p class="sidebar-item-text" >Documents</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/image.png" alt="">
-            <p>Pictures</p>
+            <p class="sidebar-item-text" >Pictures</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/music.png" alt="">
-            <p>Music</p>
+            <p class="sidebar-item-text" >Music</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/game.png" alt="">
-            <p>Saved Games</p>
+            <p class="sidebar-item-text" >Saved Games</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Videos</p>
+            <p class="sidebar-item-text" >Videos</p>
           </div>
         </div>
         <div class="indent">
           <div class="bar">
             <img class="bar-ico" src="Resource/SVG/expand_more_black_48dp.svg" alt="">
             <img class="bar-ico" src="Resource/Icons/thispc.png" alt="">
-            <p>This PC</p>
+            <p class="sidebar-item-text" >This PC</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Local Disk (C:)</p>
+            <p class="sidebar-item-text" >Local Disk (C:)</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Local Disk (D:)</p>
+            <p class="sidebar-item-text" >Local Disk (D:)</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Local Disk (E:)</p>
+            <p class="sidebar-item-text" >Local Disk (E:)</p>
           </div>
           <div class="indent-items">
             <img class="bar-ico" src="Resource/Icons/download.png" alt="">
-            <p>Local Disk (F:)</p>
+            <p class="sidebar-item-text" >Local Disk (F:)</p>
           </div>
         </div>
         <div class="indent">
           <div class="bar">
             <img class="bar-ico" src="Resource/SVG/chevron_right_black_48dp.svg" alt="">
             <img class="bar-ico" src="Resource/Icons/OneDrive.png" alt="">
-            <p>OneDrive</p>
+            <p class="sidebar-item-text" >OneDrive</p>
           </div>
         </div>
         <div class="indent">
           <div class="bar">
             <img class="bar-ico" src="Resource/SVG/chevron_right_black_48dp.svg" alt="">
             <img class="bar-ico" src="Resource/Icons/OneNote.png" alt="">
-            <p>Network</p>
+            <p class="sidebar-item-text" >Network</p>
           </div>
         </div>
       </aside>
@@ -335,10 +372,6 @@
           <div class="folder">
             <img class="folder-ico" src="Resource/Icons/image.png" alt="">
             <h3 class="folder-title">Pictures</h3>
-          </div>
-          <div class="folder">
-            <img class="folder-ico" src="Resource/Icons/game.png" alt="">
-            <h3 class="folder-title">Saved Games</h3>
           </div>
           <div class="folder">
             <img class="folder-ico" src="Resource/Icons/explorer.png" alt="">
